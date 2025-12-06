@@ -11,7 +11,7 @@ on:
 jobs:
   job1: 
     env:
-      DATABASE_HOST_NAME: localhost
+      DATABASE_HOSTNAME: localhost
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: 123456
       DATABASE_NAME: fastapi
