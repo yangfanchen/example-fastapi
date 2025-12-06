@@ -17,7 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 my_posts =[{"title":"title of post 1","content":"content of post 1","id":1}
            ,{"title":"title of post 2","content":"content of post 2",id:2}]
 
-models.Base.metadata.create_all(bind = engine)
+# models.Base.metadata.create_all(bind = engine)
 app = FastAPI()
 ###    return {"message":"Hello World"}
 
