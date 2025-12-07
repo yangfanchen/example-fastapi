@@ -79,10 +79,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
-
+    environment:
+      name: production
+    permissions:
+      deployments: write
     steps:
-      - name: deploying stuff
-        run: echo "going to deploy some stuff"
+     - uses: JorgeLNJunior/render-deploy@v1.4.6
+       with:
+        service_id: ${{ secrets.RENDER_SERVICE_ID }}
+        api_key: ${{ secrets.RENDER_API_KEY }}
+        clear_cache: true # Optional: Clear Render's build cache
+        wait_deploy: true
+        github_deployment: true
 
 
 
