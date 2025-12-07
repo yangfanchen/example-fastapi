@@ -6,7 +6,7 @@ from app.config import settings
 def test_root(client):
     res = client.get("/")
     print(res.json())
-    assert res.json().get("message") == "Hello World1234"
+    assert res.json().get("message") == "Retry the entire pipeline process!"
 
 def test_create_user(client):
     res = client.post("/users/",json={
